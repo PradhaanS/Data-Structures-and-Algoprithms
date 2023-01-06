@@ -24,16 +24,16 @@ void insert()//function to insert elements into queue
     		ptr->data=item;
     		if(front==NULL)
     		{
-      		front=ptr;
-      		rear=ptr;
-      		front->next=NULL;
-      		front->next=NULL;
+			front=ptr;
+			rear=ptr;
+			front->next=NULL;
+			front->next=NULL;
     		}
     		else
     		{
-      		rear->next=ptr;
-      		rear=ptr;
-      		rear->next=NULL;
+			rear->next=ptr;
+			rear=ptr;
+			rear->next=NULL;
     		}
    	}
 }
@@ -69,8 +69,8 @@ void display()//function to display queue elements
     		printf("Printing elements: \n");
     		while(ptr!=NULL)
     		{
-      		printf("%d ",ptr->data);
-      		ptr=ptr->next;
+			printf("%d ",ptr->data);
+			ptr=ptr->next;
     		}
  		printf("\n"); 	
   	}
@@ -86,16 +86,16 @@ int main()//main function
     		scanf("%d",&choice);//operation input from user
     		switch(choice)
     		{
-      		case 1: insert();
-      		break;
-      		case 2: delete();
-              	break;
-      		case 3: display();
-              	break;
-      		case 4: exit(0);
-      		default: printf("Invalid choice");
-              	break;
-     	}   
+			case 1: insert();
+			break;
+			case 2: delete();
+			break;
+			case 3: display();
+			break;
+			case 4: exit(0);
+			default: printf("Invalid choice");
+			break;
+     		}   
    	}
   	return 0;
 }
