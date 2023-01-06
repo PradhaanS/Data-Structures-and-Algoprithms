@@ -27,7 +27,7 @@ void insert()//function to insert elements into queue
 			front=ptr;
 			rear=ptr;
 			front->next=NULL;
-			front->next=NULL;
+			rear->next=NULL;
     		}
     		else
     		{
