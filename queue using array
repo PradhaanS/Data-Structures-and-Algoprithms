@@ -5,13 +5,13 @@ void insert();
 void delete();
 void display();
 int front=-1,rear=-1;
-int queue[max];
-void insert()
+int queue[max];//declaration of array
+void insert()//function to insert element into queue
 {
 	int item;
 	printf("Enter the element\n");
 	scanf("%d",&item);
-	if(rear==max-1)
+	if(rear==max-1)//to check if queue is full
 	{
 		printf("overflow\n");
 		return;
@@ -28,12 +28,12 @@ void insert()
 	queue[rear]=item;
 	printf("Value inserted\n");
 }
-void delete()
+void delete()//function to delete element from queue
 {
 	int item;
-	if(front==-1||front>rear)
+	if(front==-1||front>rear)//to  check if queue is empty
 	{
-		printf("overflow\n");
+		printf("underflow\n");
 		return;
 	}
 	else
@@ -51,17 +51,17 @@ void delete()
 		printf("Value deleted\n");
 	}
 }
-void display()
+void display()//function to display queue elements
 {
 	int i;
-	if(rear==-1)
+	if(rear==-1)//to  check if queue is empty
 	{
 		printf("Empty queue\n");
 	}
 	else
 	{
 		printf("Printing values:\n");
-		for(i=front;i<=rear;i++)
+		for(i=front;i<=rear;i++)//to print queue elements
 		{
 			printf("%d\n",queue[i]);
 		}
@@ -77,16 +77,16 @@ int main()//main function
     		scanf("%d",&choice);//operation input from user
     		switch(choice)
     		{
-      		case 1: insert();
-      		break;
-      		case 2: delete();
-              	break;
-      		case 3: display();
-              	break;
-      		case 4: exit(0);
-      		default: printf("Invalid choice\n");
-              	break;
-     	}   
+			case 1: insert();
+			break;
+			case 2: delete();
+			break;
+			case 3: display();
+			break;
+			case 4: exit(0);
+			default: printf("Invalid choice\n");
+			break;
+     		}   
    	}
   	return 0;
 } 
