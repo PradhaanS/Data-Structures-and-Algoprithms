@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #define max 100
 void enqueue();
-void delete();
+void dequeue();
 void display();
 int front=-1,rear=-1;
 int queue[max];//declaration of array
